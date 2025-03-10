@@ -1,27 +1,26 @@
-// Definisi Kelas
-class Mahasiswa {
+// Kelas induk (superclass)
+class Hewan {
     String nama;
-    int nim;
 
-    // Konstruktor
-    Mahasiswa(String nama, int nim) {
-        this.nama = nama;
-        this.nim = nim;
-    }
-
-    // Metode untuk menampilkan informasi mahasiswa
-    void tampilkanInfo() {
-        System.out.println("Nama: " + nama + ", NIM: " + nim);
+    void makan() {
+        System.out.println(nama + " sedang makan.");
     }
 }
 
-// Program Utama
+// Kelas anak (subclass) yang mewarisi dari Hewan
+class Kucing extends Hewan {
+    void suara() {
+        System.out.println(nama + " mengeong: Meow!");
+    }
+}
+
+// Main class untuk menjalankan program
 public class Main {
     public static void main(String[] args) {
-        Mahasiswa mhs1 = new Mahasiswa("Budi", 220001);
-        Mahasiswa mhs2 = new Mahasiswa("Siti", 220002);
+        Kucing kucing1 = new Kucing();
+        kucing1.nama = "Tom";
 
-        mhs1.tampilkanInfo();
-        mhs2.tampilkanInfo();
+        kucing1.makan(); // Memanggil metode dari superclass
+        kucing1.suara(); // Memanggil metode dari subclass
     }
 }
