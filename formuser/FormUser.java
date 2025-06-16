@@ -84,3 +84,4 @@ public class FormUser extends JFrame {
         SwingUtilities.invokeLater(() -> new FormUser());
     }
 }
+hapus file formuser karena tidak diperlukan
