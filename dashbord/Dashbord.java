@@ -70,3 +70,5 @@ public class Dashbord extends JFrame {
         SwingUtilities.invokeLater(() -> new Dashbord().setVisible(true));
     }
 }
+hapus file formuser karena tidak diperlukan
+    
